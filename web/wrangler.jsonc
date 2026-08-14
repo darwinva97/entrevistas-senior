@@ -2,6 +2,8 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "entrevistas-senior",
   "compatibility_date": "2025-09-01",
+  // Dominio propio: wrangler crea el registro DNS y el custom domain al desplegar.
+  "routes": [{ "pattern": "entrevistas.bezenti.com", "custom_domain": true }],
   // Sitio 100% estático (Astro + Starlight) servido como Workers Static Assets.
   "assets": {
     "directory": "./dist",

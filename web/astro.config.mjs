@@ -6,7 +6,7 @@ import mdx from '@astrojs/mdx';
 const REPO = 'https://github.com/darwinva97/entrevistas-senior';
 
 export default defineConfig({
-  site: 'https://entrevistas-senior.darwin-sva-97.workers.dev',
+  site: 'https://entrevistas.bezenti.com',
   trailingSlash: 'always',
   build: { format: 'directory' },
   integrations: [

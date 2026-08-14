@@ -2,7 +2,7 @@
 
 Preparación completa para entrevistas técnicas **senior**: un banco de **389 preguntas con respuestas**, **10 cursos** que enseñan lo necesario para responderlas y **simulacros de entrevista por rol y nivel** con respuestas graduadas.
 
-🌐 **Sitio web (español e inglés):** <https://entrevistas-senior.darwin-sva-97.workers.dev>
+🌐 **Sitio web (español e inglés):** <https://entrevistas.bezenti.com>
 
 | | |
 |---|---|
@@ -108,7 +108,7 @@ Este formato se valida automáticamente (ver abajo), así que cualquier aportaci
 
 Todo este contenido se publica como sitio estático multiidioma (**español e inglés**) con buscador:
 
-<https://entrevistas-senior.darwin-sva-97.workers.dev>
+<https://entrevistas.bezenti.com>
 
 - Construido con **Astro + Starlight**; el código vive en [`web/`](web/).
 - El contenido **no se duplica**: un script sincroniza el markdown del repositorio y reescribe los enlaces a rutas del sitio, así que la fuente de verdad sigue siendo el markdown que ves aquí.
