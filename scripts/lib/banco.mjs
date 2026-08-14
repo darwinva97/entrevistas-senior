@@ -119,11 +119,14 @@ export function totalArea(area) {
   return area.ficheros.reduce((n, f) => n + f.preguntas.length, 0);
 }
 
+/** Directorios que no forman parte del contenido del repositorio. */
+const IGNORADOS = new Set(['.git', 'node_modules', 'web', 'dist', '.astro']);
+
 /** Todos los ficheros markdown del repositorio (para validar enlaces). */
 export function todosLosMarkdown(base = RAIZ) {
   const salida = [];
   for (const entrada of readdirSync(base)) {
-    if (entrada === '.git' || entrada === 'node_modules') continue;
+    if (IGNORADOS.has(entrada)) continue;
     const completa = join(base, entrada);
     if (statSync(completa).isDirectory()) salida.push(...todosLosMarkdown(completa));
     else if (entrada.endsWith('.md')) salida.push(relative(RAIZ, completa).split(sep).join('/'));

@@ -78,7 +78,8 @@ for (const fichero of ficheros) {
     const sinCodigoEnLinea = linea.replace(/`[^`]*`/g, '``');   // ignora código en línea
     for (const m of sinCodigoEnLinea.matchAll(ENLACE)) {
       const destino = m[1];
-      if (/^(https?:|mailto:|#)/.test(destino)) continue;   // externos y anclas locales
+      // externos, anclas locales y rutas absolutas del sitio web
+      if (/^(https?:|mailto:|#|\/)/.test(destino)) continue;
       const [ruta, anclaDestino] = destino.split('#');
       const absoluta = resolve(join(RAIZ, dirname(fichero)), ruta);
       const rel = relative(RAIZ, absoluta).split(sep).join('/');

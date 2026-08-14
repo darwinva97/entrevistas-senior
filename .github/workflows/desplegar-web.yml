@@ -1,0 +1,47 @@
+name: Desplegar sitio web
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'web/**'
+      - 'cursos/**'
+      - 'entrevistas/**'
+      - '**/*.md'
+      - '.github/workflows/desplegar-web.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: desplegar-web
+  cancel-in-progress: true
+
+jobs:
+  construir-y-desplegar:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: web/pnpm-lock.yaml
+
+      - name: Instalar dependencias
+        run: pnpm install --frozen-lockfile
+
+      - name: Construir (sincroniza el contenido del repo + Pagefind)
+        run: pnpm build
+
+      - name: Desplegar a Cloudflare (Workers Static Assets)
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: web
+          command: deploy

@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "entrevistas-senior",
+  "compatibility_date": "2025-09-01",
+  // Sitio 100% estático (Astro + Starlight) servido como Workers Static Assets.
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
