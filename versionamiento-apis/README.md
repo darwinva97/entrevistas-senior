@@ -4,6 +4,10 @@ Guía de estudio en español para entrevistas técnicas de perfiles **senior bac
 
 Cada pregunta incluye una **📝 Respuesta resumen** (lo que dirías en 30–60 segundos) y una **📖 Respuesta detallada** con ejemplos concretos (OpenAPI, protobuf, Avro, SQL, Terraform, etc.), trade-offs, errores comunes y qué espera oír el entrevistador.
 
+
+> 🎓 **¿Te faltan bases para responder esto?** El curso [Diseño y versionado de APIs](../cursos/07-apis-y-versionado/) enseña exactamente lo necesario, con laboratorios y autoevaluación.
+> Ver también: [índice completo](../INDICE.md) · [plan de estudio](../PLAN-DE-ESTUDIO.md) · [glosario](../GLOSARIO.md) · [inicio](../README.md)
+
 ## Contenido
 
 | Archivo | Tema | Preguntas |

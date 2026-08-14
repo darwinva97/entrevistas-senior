@@ -2,6 +2,10 @@
 
 Guía de preparación para entrevistas técnicas de nivel Senior. Cada pregunta incluye una **respuesta resumen** (lo que dirías en 30–60 segundos) y una **respuesta detallada** con código TypeScript realista, trade-offs, errores comunes y qué espera oír el entrevistador. Los [CASO] son análisis de problemas de producción con escenario, diagnóstico paso a paso, herramientas, solución y prevención.
 
+
+> 🎓 **¿Te faltan bases para responder esto?** El curso [TypeScript / Node senior](../cursos/02-typescript-node-senior/) enseña exactamente lo necesario, con laboratorios y autoevaluación.
+> Ver también: [índice completo](../INDICE.md) · [plan de estudio](../PLAN-DE-ESTUDIO.md) · [glosario](../GLOSARIO.md) · [inicio](../README.md)
+
 ## Índice
 
 | Archivo | Contenido | Preguntas |

@@ -1,0 +1,15 @@
+{
+  "name": "entrevistas-senior",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Banco de preguntas y cursos para entrevistas técnicas de nivel senior: microservicios, cloud, seguridad y frontend",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "indice": "node scripts/generar-indice.mjs",
+    "validar": "node scripts/generar-indice.mjs --check && node scripts/validar.mjs"
+  },
+  "license": "MIT"
+}

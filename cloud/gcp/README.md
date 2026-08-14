@@ -2,6 +2,10 @@
 
 Banco de preguntas para entrevistas técnicas de arquitectura cloud en Google Cloud Platform, orientado a perfiles senior de backend y microservicios. Cada pregunta incluye una **respuesta resumen** (30–60 segundos) y una **respuesta detallada** con servicios concretos, límites, costos, trade-offs y errores comunes. Los casos ([CASO]) siguen el formato: escenario → diagnóstico paso a paso (Cloud Monitoring, Cloud Trace, Cloud Logging) → solución → prevención.
 
+
+> 🎓 **¿Te faltan bases para responder esto?** El curso [Cloud y Kubernetes](../../cursos/04-cloud-y-kubernetes/) enseña exactamente lo necesario, con laboratorios y autoevaluación.
+> Ver también: [índice completo](../../INDICE.md) · [plan de estudio](../../PLAN-DE-ESTUDIO.md) · [glosario](../../GLOSARIO.md) · [inicio](../../README.md)
+
 ## Archivos
 
 | Archivo | Contenido | Preguntas |
