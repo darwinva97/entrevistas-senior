@@ -2,6 +2,10 @@
 
 Banco de preguntas y casos de producción para entrevistas técnicas de nivel **senior** en Go con arquitectura de microservicios. Cada pregunta incluye una **respuesta resumen** (lo que dirías en 30–60 segundos) y una **respuesta detallada** (código realista, trade-offs, errores comunes y qué espera oír el entrevistador).
 
+
+> 🎓 **¿Te faltan bases para responder esto?** El curso [Go senior](../cursos/03-go-senior/) enseña exactamente lo necesario, con laboratorios y autoevaluación.
+> Ver también: [índice completo](../INDICE.md) · [plan de estudio](../PLAN-DE-ESTUDIO.md) · [glosario](../GLOSARIO.md) · [inicio](../README.md)
+
 ## Archivos
 
 | Archivo | Contenido | Preguntas |

@@ -2,6 +2,10 @@
 
 Guía de preparación para entrevistas técnicas de arquitectura frontend senior, especializada en microfrontends. Cada pregunta incluye una **respuesta resumen** (lo que dirías en 30–60 segundos) y una **respuesta detallada** (código realista, trade-offs, errores comunes y qué espera oír el entrevistador).
 
+
+> 🎓 **¿Te faltan bases para responder esto?** El curso [Microfrontends](../cursos/05-microfrontends/) enseña exactamente lo necesario, con laboratorios y autoevaluación.
+> Ver también: [índice completo](../INDICE.md) · [plan de estudio](../PLAN-DE-ESTUDIO.md) · [glosario](../GLOSARIO.md) · [inicio](../README.md)
+
 ## Archivos
 
 | Archivo | Contenido | Preguntas |

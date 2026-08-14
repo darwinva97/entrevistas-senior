@@ -2,6 +2,10 @@
 
 Banco de preguntas de entrevista técnica para perfiles senior de backend y microservicios en Azure. Cada pregunta incluye una **respuesta resumen** (lo que dirías en 30–60 segundos) y una **respuesta detallada** (servicios concretos, límites, costos, trade-offs y errores comunes). Las preguntas marcadas como **[CASO]** son análisis de problemas con escenario, diagnóstico paso a paso (Azure Monitor, Application Insights, Log Analytics/KQL), solución y prevención.
 
+
+> 🎓 **¿Te faltan bases para responder esto?** El curso [Cloud y Kubernetes](../../cursos/04-cloud-y-kubernetes/) enseña exactamente lo necesario, con laboratorios y autoevaluación.
+> Ver también: [índice completo](../../INDICE.md) · [plan de estudio](../../PLAN-DE-ESTUDIO.md) · [glosario](../../GLOSARIO.md) · [inicio](../../README.md)
+
 ## Archivos
 
 | Archivo | Contenido | Preguntas |

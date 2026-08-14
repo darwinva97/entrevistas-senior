@@ -6,6 +6,10 @@ Cada pregunta incluye una **respuesta resumen** (lo que dirías en 30-60 segundo
 
 ---
 
+
+> 🎓 **¿Te faltan bases para responder esto?** El curso [Seguridad aplicada](../cursos/06-seguridad/) enseña exactamente lo necesario, con laboratorios y autoevaluación.
+> Ver también: [índice completo](../INDICE.md) · [plan de estudio](../PLAN-DE-ESTUDIO.md) · [glosario](../GLOSARIO.md) · [inicio](../README.md)
+
 ## Índice de archivos
 
 | # | Archivo | Contenido | Nº de preguntas |

@@ -2,6 +2,10 @@
 
 Colección de casos de **system design** e **incidentes en producción** al estilo de entrevistas senior/staff. Cada caso sigue el mismo formato: enunciado del entrevistador, respuesta resumen (el "elevator pitch" de la solución) y respuesta detallada con aclaración de requisitos, estimaciones, arquitectura con diagramas, trade-offs razonados y "qué espera oír el entrevistador". Los incidentes incluyen además cronología de diagnóstico, hipótesis descartadas, root cause, fix inmediato vs definitivo y postmortem.
 
+
+> 🎓 **¿Te faltan bases para responder esto?** El curso [System design e incidentes](../cursos/08-system-design/) enseña exactamente lo necesario, con laboratorios y autoevaluación.
+> Ver también: [índice completo](../INDICE.md) · [plan de estudio](../PLAN-DE-ESTUDIO.md) · [glosario](../GLOSARIO.md) · [inicio](../README.md)
+
 ## Archivos
 
 | Archivo | Contenido | Casos |

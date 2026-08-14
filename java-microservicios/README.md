@@ -2,6 +2,10 @@
 
 Banco de preguntas de entrevista para posiciones **Java Senior** con arquitectura de **microservicios**. Cada pregunta incluye una respuesta resumen (30–60 segundos) y una respuesta detallada con código realista, trade-offs, errores comunes y lo que el entrevistador espera oír.
 
+
+> 🎓 **¿Te faltan bases para responder esto?** El curso [Java senior + Spring](../cursos/01-java-senior/) enseña exactamente lo necesario, con laboratorios y autoevaluación.
+> Ver también: [índice completo](../INDICE.md) · [plan de estudio](../PLAN-DE-ESTUDIO.md) · [glosario](../GLOSARIO.md) · [inicio](../README.md)
+
 ## Archivos
 
 | Archivo | Contenido | Preguntas |

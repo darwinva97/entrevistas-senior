@@ -2,6 +2,10 @@
 
 Banco de preguntas para entrevistas de arquitectura cloud en AWS orientado a perfiles senior de backend/microservicios. Cada pregunta incluye una **respuesta resumen** (lo que dirías en 30–60 segundos) y una **respuesta detallada** (servicios concretos, límites, costos, trade-offs y errores comunes). Los casos de tipo **[CASO]** incluyen escenario, diagnóstico paso a paso, solución y prevención.
 
+
+> 🎓 **¿Te faltan bases para responder esto?** El curso [Cloud y Kubernetes](../../cursos/04-cloud-y-kubernetes/) enseña exactamente lo necesario, con laboratorios y autoevaluación.
+> Ver también: [índice completo](../../INDICE.md) · [plan de estudio](../../PLAN-DE-ESTUDIO.md) · [glosario](../../GLOSARIO.md) · [inicio](../../README.md)
+
 ## Índice de archivos
 
 | Archivo | Contenido | Preguntas |
