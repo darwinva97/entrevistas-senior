@@ -1,0 +1,24 @@
+---
+/**
+ * Sustituye al Banner de Starlight para avisar cuando la página que estás viendo
+ * todavía no está traducida (Starlight sirve el contenido en español como respaldo).
+ */
+const { entry, isFallback } = Astro.locals.starlightRoute;
+const banner = entry.data.banner;
+---
+
+{banner && <div class="sl-banner" set:html={banner.content} />}
+
+{
+  isFallback && (
+    <div class="aviso-traduccion">
+      <strong>This page is not translated yet.</strong> You are reading the Spanish original. The mock
+      interviews, the landing page and the guides are available in English; the question bank and the
+      courses are being translated progressively —{' '}
+      <a href="https://github.com/darwinva97/entrevistas-senior/blob/master/CONTRIBUTING.md">
+        contributions welcome
+      </a>
+      .
+    </div>
+  )
+}

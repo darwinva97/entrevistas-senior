@@ -1,0 +1,88 @@
+---
+title: Entrevistas Técnicas Senior
+description: 389 preguntas con respuestas, 10 cursos con laboratorios y simulacros de entrevista por rol y nivel — con lo que NO debes decir y por qué.
+template: splash
+hero:
+  tagline: Preguntas reales, cursos que enseñan a responderlas y simulacros por rol y nivel — con lo que <strong>no</strong> debes decir y por qué.
+  actions:
+    - text: Empezar por aquí
+      link: /guia/como-usar/
+      icon: right-arrow
+    - text: Simulacros de entrevista
+      link: /entrevistas/
+      variant: secondary
+    - text: GitHub
+      link: https://github.com/darwinva97/entrevistas-senior
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+<CardGrid stagger>
+  <Card title="389 preguntas con respuesta" icon="open-book">
+    Cada una con **respuesta resumen** (lo que dices en 30–60 s) y **respuesta detallada** con código,
+    trade-offs y errores comunes. 160 son casos reales de producción y system design.
+  </Card>
+  <Card title="10 cursos, 44 módulos" icon="rocket">
+    De fundamentos distribuidos a Go, cloud, seguridad o microfrontends. Cada módulo trae
+    **laboratorio ejecutable**, autoevaluación y enlace a las preguntas que desbloquea.
+  </Card>
+  <Card title="Simulacros por rol y nivel" icon="seti:notebook">
+    QA, backend, frontend, fullstack, DevOps/SRE, arquitecto y tech lead —
+    de junior a staff, técnicas y funcionales.
+  </Card>
+  <Card title="Respuestas por niveles" icon="approve-check">
+    Para cada pregunta verás qué **no debes decir y por qué**, qué respuesta es
+    **aceptable** y cuál es la **ideal**. La diferencia entre pasar y destacar.
+  </Card>
+</CardGrid>
+
+## Por dónde empezar
+
+<CardGrid>
+  <LinkCard
+    title="🧭 Cómo usar esto"
+    description="El método: diagnóstico, estudio, práctica en voz alta y simulacro."
+    href="/guia/como-usar/"
+  />
+  <LinkCard
+    title="🗺️ Plan de estudio"
+    description="Rutas de 10 días, de 8 semanas y por perfil de vacante."
+    href="/guia/plan-de-estudio/"
+  />
+  <LinkCard
+    title="🎤 Simulacros de entrevista"
+    description="Entrevistas completas por rol y nivel, con respuestas graduadas."
+    href="/entrevistas/"
+  />
+  <LinkCard
+    title="🎓 Cursos"
+    description="Lo necesario para responder el banco, con laboratorios."
+    href="/cursos/"
+  />
+  <LinkCard
+    title="📑 Banco de preguntas"
+    description="Las 389 preguntas, indexadas por área y por tipo."
+    href="/banco/"
+  />
+  <LinkCard
+    title="📖 Glosario"
+    description="60 términos que debes poder definir en 20 segundos."
+    href="/guia/glosario/"
+  />
+</CardGrid>
+
+## Cómo se ve una respuesta graduada
+
+En los [simulacros](/entrevistas/), cada pregunta se responde en cuatro capas:
+
+> **❌ Lo que NO debes decir** — la respuesta que suena razonable y te baja de nivel, con la explicación de por qué está mal.
+>
+> **⚠️ Respuesta aceptable** — la que aprueba pero no destaca, y qué le falta exactamente.
+>
+> **✅ Respuesta ideal** — la que te sube de banda, con el mecanismo, el trade-off y el número.
+>
+> **🔁 Repregunta probable** — lo que te van a preguntar después y cómo lo respondes.
+
+Porque en una entrevista senior casi nunca te evalúan por acertar: te evalúan por **cómo justificas**, qué trade-offs ves y qué evitas afirmar.

@@ -1,0 +1,25 @@
+{
+  "name": "entrevistas-senior-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.12.0",
+  "scripts": {
+    "sync": "node scripts/sincronizar-contenido.mjs",
+    "dev": "npm run sync && astro dev",
+    "build": "npm run sync && astro build",
+    "preview": "astro preview"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "sharp", "workerd"]
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^7.0.5",
+    "@astrojs/starlight": "^0.41.7",
+    "astro": "^7.2.2",
+    "sharp": "^0.35.3"
+  },
+  "devDependencies": {
+    "wrangler": "^4.123.0"
+  }
+}

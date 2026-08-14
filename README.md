@@ -1,14 +1,34 @@
 # 🎯 Entrevistas Técnicas Nivel Senior — Microservicios, Cloud y Frontend
 
-Preparación completa para entrevistas técnicas **senior**: un banco de **389 preguntas con respuestas** y **10 cursos** que enseñan lo necesario para responderlas.
+Preparación completa para entrevistas técnicas **senior**: un banco de **389 preguntas con respuestas**, **10 cursos** que enseñan lo necesario para responderlas y **simulacros de entrevista por rol y nivel** con respuestas graduadas.
+
+🌐 **Sitio web (español e inglés):** <https://entrevistas-senior.darwin-sva-97.workers.dev>
 
 | | |
 |---|---|
+| 🎤 **[Simulacros de entrevista](entrevistas/)** | Por rol (QA, backend, frontend, fullstack, DevOps, arquitecto, tech lead) y nivel |
 | 📚 **[Banco de preguntas](INDICE.md)** | 389 preguntas, 160 de ellas de análisis de casos reales |
 | 🎓 **[Cursos](cursos/)** | 10 cursos · 44 módulos con teoría, laboratorios y autoevaluación |
 | 🗺️ **[Plan de estudio](PLAN-DE-ESTUDIO.md)** | Rutas de 10 días y de 8 semanas, y por perfil de vacante |
 | 📖 **[Glosario](GLOSARIO.md)** | Los términos que debes poder definir en 20 segundos |
 | ✅ **[Seguimiento](PROGRESO.md)** | Checklist para marcar lo que ya dominas |
+
+---
+
+## 🎤 Simulacros de entrevista — por rol y nivel
+
+Entrevistas completas escritas como las plantea un entrevistador real. Para cada pregunta:
+
+- **❌ Lo que NO debes decir** — la respuesta plausible que te baja de nivel, y **por qué** está mal.
+- **⚠️ Respuesta aceptable** — la que aprueba pero no destaca, y qué le falta exactamente.
+- **✅ Respuesta ideal** — la que te sube de banda: mecanismo, trade-off y número.
+- **🔁 Repregunta probable** — lo que preguntan después y cómo lo respondes.
+
+| Técnicas por rol | Funcionales |
+|---|---|
+| [🧪 QA / Automatización](entrevistas/tecnicas/qa.md) · [⚙️ Backend](entrevistas/tecnicas/backend.md) · [🎨 Frontend](entrevistas/tecnicas/frontend.md) · [🧩 Fullstack](entrevistas/tecnicas/fullstack.md) · [🛠️ DevOps/SRE](entrevistas/tecnicas/devops-sre.md) · [🏛️ Arquitecto](entrevistas/tecnicas/arquitecto.md) · [🧭 Tech Lead](entrevistas/tecnicas/tech-lead.md) | [Por nivel: junior → staff](entrevistas/funcionales/por-nivel.md) · [Liderazgo y conflictos](entrevistas/funcionales/liderazgo-y-conflictos.md) · [RRHH, motivación y cierre](entrevistas/funcionales/rrhh-y-cierre.md) |
+
+Todas están disponibles también [en inglés](entrevistas/en/).
 
 ---
 
@@ -83,6 +103,25 @@ Explicación profunda, código, trade-offs, errores comunes, qué espera oír el
 ```
 
 Este formato se valida automáticamente (ver abajo), así que cualquier aportación lo mantiene.
+
+## 🌐 El sitio web
+
+Todo este contenido se publica como sitio estático multiidioma (**español e inglés**) con buscador:
+
+<https://entrevistas-senior.darwin-sva-97.workers.dev>
+
+- Construido con **Astro + Starlight**; el código vive en [`web/`](web/).
+- El contenido **no se duplica**: un script sincroniza el markdown del repositorio y reescribe los enlaces a rutas del sitio, así que la fuente de verdad sigue siendo el markdown que ves aquí.
+- Los simulacros de entrevista, la portada y las guías están traducidos al inglés; el banco y los cursos se sirven en español con aviso, y se traducen de forma incremental.
+
+```bash
+cd web
+pnpm install
+pnpm dev        # sincroniza el contenido y levanta el sitio en local
+pnpm build      # build de producción (incluye el índice de búsqueda)
+```
+
+El despliegue es automático por CI/CD en cada push a `master`.
 
 ## 🛠️ Herramientas del repositorio
 

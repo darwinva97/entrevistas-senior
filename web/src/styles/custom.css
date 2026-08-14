@@ -1,0 +1,53 @@
+/* Paleta propia: azul profundo con acento ámbar, legible en claro y oscuro. */
+:root {
+  --sl-color-accent-low: #16243a;
+  --sl-color-accent: #2f6fed;
+  --sl-color-accent-high: #b9d0ff;
+  --sl-color-white: #fff;
+}
+
+:root[data-theme='light'] {
+  --sl-color-accent-low: #d8e4ff;
+  --sl-color-accent: #1d4ed8;
+  --sl-color-accent-high: #16305e;
+}
+
+/* Aviso de página sin traducir */
+.aviso-traduccion {
+  border: 1px solid var(--sl-color-orange);
+  background: var(--sl-color-orange-low);
+  color: var(--sl-color-white);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  font-size: var(--sl-text-sm);
+  line-height: 1.6;
+}
+
+.aviso-traduccion a {
+  color: inherit;
+}
+
+/* Bloques de respuesta graduada: se colorean por el emoji inicial del párrafo fuerte. */
+.sl-markdown-content blockquote {
+  border-inline-start-color: var(--sl-color-accent);
+}
+
+/* Tablas anchas de comparación: que no rompan el layout en móvil */
+.sl-markdown-content table {
+  display: block;
+  overflow-x: auto;
+  white-space: normal;
+}
+
+/* Diagramas ASCII dentro de bloques de código: un poco más compactos */
+.sl-markdown-content pre {
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+/* Emojis de sección algo más grandes para escanear rápido */
+.sl-markdown-content h2,
+.sl-markdown-content h3 {
+  scroll-margin-top: 6rem;
+}
