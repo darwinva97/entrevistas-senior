@@ -1,3 +1,6 @@
+# pnpm 10+ exige declarar qué dependencias pueden ejecutar scripts de instalación.
+# esbuild y workerd descargan su binario en el postinstall; sharp compila sus bindings.
 allowBuilds:
-  esbuild: set this to true or false
-  workerd: set this to true or false
+  esbuild: true
+  workerd: true
+  sharp: true
