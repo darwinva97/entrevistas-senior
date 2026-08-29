@@ -68,6 +68,40 @@ Los términos que debes poder definir **en 20 segundos** durante una entrevista.
 
 ---
 
+## Mensajería y streaming (Kafka · RabbitMQ)
+
+**Acks / min.insync.replicas** — El productor decide cuántas réplicas confirman (`acks=all`) y el broker cuántas son obligatorias. La durabilidad real la da la combinación de ambos: `acks=all` con `min.insync.replicas=1` no garantiza nada. → [10·2](cursos/10-mensajeria-y-streaming/02-kafka-por-dentro.md)
+
+**Cola vs log** — RabbitMQ borra el mensaje al consumirlo (cola); Kafka lo conserva y cada consumidor lleva su posición (log). De ahí salen replay, fan-out barato y casi todas las demás diferencias. → [10·1](cursos/10-mensajeria-y-streaming/01-colas-y-mensajeria.md)
+
+**Compaction** — Retención por clave: Kafka conserva el último valor de cada clave (con tombstones para borrar). Convierte un topic en un changelog/snapshot reconstruible. → [10·2](cursos/10-mensajeria-y-streaming/02-kafka-por-dentro.md)
+
+**Consumer group / rebalanceo** — Los consumidores de un grupo se reparten las particiones; cuando entra/sale uno (o tarda más de `max.poll.interval.ms`) se redistribuyen. Un rebalanceo en bucle es un incidente clásico. → [10·2](cursos/10-mensajeria-y-streaming/02-kafka-por-dentro.md)
+
+**Consumer lag** — Distancia entre el último offset producido y el último consumido. Es *la* métrica de salud de un consumidor: lag creciendo = no das abasto o estás caído. → [10·2](cursos/10-mensajeria-y-streaming/02-kafka-por-dentro.md)
+
+**DLQ (dead letter queue)** — A donde va un mensaje tras agotar los reintentos, con metadatos de la causa. Sin DLQ, un mensaje envenenado bloquea la partición o gira para siempre. → [10·1](cursos/10-mensajeria-y-streaming/01-colas-y-mensajeria.md)
+
+**Event-carried state transfer** — El evento lleva el estado necesario para que el consumidor no tenga que volver a preguntar. Más autonomía a cambio de eventos más gordos y duplicidad de datos. → [10·4](cursos/10-mensajeria-y-streaming/04-patrones-event-driven.md)
+
+**Exactly-once (Kafka EOS)** — Transacciones de Kafka: escribir en varios topics + offsets atómicamente, con `read_committed` y fencing de zombis. Cubre el ecosistema Kafka; los side effects externos siguen necesitando idempotencia. → [10·2](cursos/10-mensajeria-y-streaming/02-kafka-por-dentro.md)
+
+**Exchange / binding / routing key** — El modelo de enrutado de RabbitMQ: el productor publica a un exchange y las colas se suscriben con bindings (direct, topic, fanout, headers). Routing rico que Kafka no tiene. → [10·3](cursos/10-mensajeria-y-streaming/03-rabbitmq-en-produccion.md)
+
+**ISR (in-sync replicas)** — Réplicas al día con el líder de la partición. Los mensajes se confirman contra el ISR; si cae por debajo de `min.insync.replicas`, el topic deja de aceptar escrituras (durabilidad antes que disponibilidad). → [10·2](cursos/10-mensajeria-y-streaming/02-kafka-por-dentro.md)
+
+**Prefetch (basic.qos)** — Cuántos mensajes sin ack puede tener en vuelo un consumidor de RabbitMQ. Bajo = fairness y menos redelivery; alto = throughput. Mal puesto explica la mitad de los problemas de consumo. → [10·3](cursos/10-mensajeria-y-streaming/03-rabbitmq-en-produccion.md)
+
+**Publisher confirms** — El "acks" de RabbitMQ: el broker confirma al productor que persistió el mensaje. Sin confirms + colas durables + mensajes persistentes, hay pérdida silenciosa. → [10·3](cursos/10-mensajeria-y-streaming/03-rabbitmq-en-produccion.md)
+
+**Quorum queue** — Cola replicada por Raft en RabbitMQ (sustituye a las mirrored). Mayoría de nodos para confirmar; trae `x-delivery-count` nativo para mensajes envenenados. → [10·3](cursos/10-mensajeria-y-streaming/03-rabbitmq-en-produccion.md)
+
+**Schema registry** — Registro central de esquemas (Avro/Protobuf/JSON Schema) que rechaza en el productor los cambios incompatibles, según el modo de compatibilidad del subject. El contract testing de los eventos. → [10·4](cursos/10-mensajeria-y-streaming/04-patrones-event-driven.md)
+
+**TTL + DLX** — El patrón de retry con backoff en RabbitMQ: el mensaje muere en una cola de espera por TTL y el dead-letter exchange lo devuelve a trabajo. Ojo al head-of-line blocking del TTL per-message. → [10·3](cursos/10-mensajeria-y-streaming/03-rabbitmq-en-produccion.md)
+
+---
+
 ## APIs y contratos
 
 **Breaking change** — Cambio que rompe a un consumidor existente. Solo son seguras las adiciones opcionales — y aun así, si el cliente tolera lo desconocido. → [07·2](cursos/07-apis-y-versionado/02-estrategias-de-versionado.md)

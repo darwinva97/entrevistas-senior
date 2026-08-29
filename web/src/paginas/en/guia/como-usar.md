@@ -10,8 +10,8 @@ This site has three kinds of material, and they are meant to be used in a loop, 
 | Material | What it is | When to use it |
 |---|---|---|
 | [🎤 Mock interviews](/en/entrevistas/) | Full interviews by role and level, with graded answers | To find out where you stand today |
-| [🎓 Courses](/en/cursos/) | 10 courses, 44 modules with labs and self-checks | To close the gaps you found |
-| [📑 Question bank](/en/banco/) | 389 questions with summary and detailed answers | To practise and to go deep on a topic |
+| [🎓 Courses](/en/cursos/) | 11 courses, 50 modules with labs and self-checks | To close the gaps you found |
+| [📑 Question bank](/en/banco/) | 494 questions with summary and detailed answers | To practise and to go deep on a topic |
 
 ## The loop
 

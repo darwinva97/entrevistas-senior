@@ -16,7 +16,7 @@ export default defineConfig({
         en: 'Senior Interviews',
       },
       description:
-        'Banco de 389 preguntas con respuestas, 10 cursos y simulacros de entrevista por rol y nivel.',
+        'Banco de 494 preguntas con respuestas, 11 cursos y simulacros de entrevista por rol y nivel.',
       defaultLocale: 'root',
       locales: {
         root: { label: 'Español', lang: 'es' },
@@ -80,6 +80,7 @@ export default defineConfig({
             { label: 'Microfrontends', collapsed: true, items: [{ autogenerate: { directory: 'banco/microfrontends' } }] },
             { label: 'Seguridad', translations: { en: 'Security' }, collapsed: true, items: [{ autogenerate: { directory: 'banco/seguridad-vulnerabilidades' } }] },
             { label: 'APIs y versionado', translations: { en: 'APIs & versioning' }, collapsed: true, items: [{ autogenerate: { directory: 'banco/versionamiento-apis' } }] },
+            { label: 'Mensajería y eventos', translations: { en: 'Messaging & events' }, collapsed: true, items: [{ autogenerate: { directory: 'banco/mensajeria-eventos' } }] },
             { label: 'Casos de estudio', translations: { en: 'Case studies' }, collapsed: true, items: [{ autogenerate: { directory: 'banco/casos-de-estudio' } }] },
           ],
         },

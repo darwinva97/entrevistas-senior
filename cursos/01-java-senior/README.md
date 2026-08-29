@@ -1,6 +1,6 @@
 # Curso 01 · Java senior + Spring en microservicios
 
-> Duración: ~12 horas. Prerrequisito: [curso 00](../00-fundamentos-distribuidos/) y 2+ años escribiendo Java.
+> Duración: ~14 horas. Prerrequisito: [curso 00](../00-fundamentos-distribuidos/) y 2+ años escribiendo Java.
 
 Prepara las **46 preguntas** de [`java-microservicios/`](../../java-microservicios/). El foco no es "saber Java", es saber **qué hace la JVM por debajo de tu código** y **qué hace Spring por debajo de tus anotaciones**, que es exactamente donde aprieta un entrevistador senior.
 
@@ -13,6 +13,7 @@ Prepara las **46 preguntas** de [`java-microservicios/`](../../java-microservici
 | 3 | [Spring Boot por dentro y transacciones](03-spring-por-dentro-y-transacciones.md) | Auto-configuración, proxies, `@Transactional`, JPA y el N+1 | 150 min |
 | 4 | [Kafka y patrones distribuidos en Java](04-kafka-y-patrones-distribuidos.md) | Productor/consumidor bien configurados, outbox, saga, Resilience4j | 150 min |
 | 5 | [Laboratorio de diagnóstico JVM](05-laboratorio-diagnostico-jvm.md) | Reproducir y diagnosticar leak, deadlock, pool agotado, GC largo | 180 min |
+| 6 | [Quarkus y compilación nativa](06-quarkus.md) | Build-time vs runtime, ArC, Mutiny, Panache, native image y sus trampas | 120 min |
 
 ## Al terminar deberías poder…
 

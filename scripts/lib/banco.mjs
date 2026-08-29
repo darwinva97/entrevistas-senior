@@ -18,6 +18,7 @@ export const AREAS = [
   { dir: 'microfrontends', titulo: 'Microfrontends', emoji: '🧩' },
   { dir: 'seguridad-vulnerabilidades', titulo: 'Seguridad y Vulnerabilidades', emoji: '🔐' },
   { dir: 'versionamiento-apis', titulo: 'Versionamiento de APIs', emoji: '🔄' },
+  { dir: 'mensajeria-eventos', titulo: 'Mensajería y Event-Driven (Kafka · RabbitMQ · Colas)', emoji: '📨' },
   { dir: 'casos-de-estudio', titulo: 'Casos de Estudio Transversales', emoji: '🧠' },
 ];
 

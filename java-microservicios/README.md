@@ -13,8 +13,9 @@ Banco de preguntas de entrevista para posiciones **Java Senior** con arquitectur
 | [01-java-core-avanzado.md](01-java-core-avanzado.md) | JVM internals, GC, JMM, concurrencia avanzada, Loom, colecciones, Java moderno, Streams | 15 |
 | [02-spring-y-microservicios.md](02-spring-y-microservicios.md) | Spring Boot/Cloud internals, transacciones, resiliencia, Kafka, patrones distribuidos, observabilidad, testing | 16 |
 | [03-casos-y-problemas.md](03-casos-y-problemas.md) | Casos de producción [CASO]: diagnóstico paso a paso, herramientas, solución y prevención | 15 |
+| [04-quarkus-y-native.md](04-quarkus-y-native.md) | Quarkus, MicroProfile y native image: build-time processing, ArC, Mutiny, Panache, GraalVM | 16 |
 
-**Total: 46 preguntas.**
+**Total: 62 preguntas.**
 
 ---
 
@@ -76,6 +77,25 @@ Banco de preguntas de entrevista para posiciones **Java Senior** con arquitectur
 15. Hot partition en Kafka: una partición concentra el tráfico y un consumer va ahogado
 
 ---
+
+### 04 — Quarkus, MicroProfile y Native Image
+
+1. ¿Qué hace diferente a Quarkus de Spring Boot por dentro? Build-time processing
+2. ArC: el CDI de Quarkus — qué implementa, qué no, y el error del "bean eliminado"
+3. GraalVM Native Image: closed-world assumption — qué se rompe y cómo se registra
+4. JVM vs native: ¿cuándo compensa de verdad compilar a native?
+5. Mutiny y el modelo reactivo de Quarkus: Uni, Multi, event loop y @Blocking
+6. RESTEasy Reactive: imperativo y reactivo en el mismo stack — ¿cómo decide el dispatch?
+7. Panache: active record vs repository, límites y Panache reactive
+8. Configuración en Quarkus: MicroProfile Config, @ConfigMapping, perfiles y la trampa build-time
+9. SmallRye Fault Tolerance: semántica exacta de @Retry, @Timeout, @CircuitBreaker, @Bulkhead y @Fallback
+10. Reactive Messaging con Kafka: channels, ack, commit strategies y concurrencia
+11. Dev mode y Dev Services: live reload, testcontainers automáticos y continuous testing
+12. Testing en Quarkus: @QuarkusTest, @QuarkusIntegrationTest, @InjectMock y test profiles
+13. Transacciones en Quarkus: Narayana, propagación y el choque bloqueante/reactivo
+14. MicroProfile REST Client: interfaces tipadas, fault tolerance y propagación de contexto
+15. **[CASO]** En JVM funciona, el binario native peta en producción al deserializar un payload
+16. **[CASO]** Migrar 40 microservicios Spring Boot a Quarkus: ¿tiene sentido? Plan y criterios
 
 ## Cómo usar este material
 

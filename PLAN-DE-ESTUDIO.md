@@ -19,7 +19,7 @@ Para cuando ya tienes la entrevista agendada. Unas 3 horas al día.
 | 5 | Tu curso de lenguaje, segunda mitad + laboratorio de diagnóstico | Los **[CASO]** de tu lenguaje |
 | 6 | [Curso 04](cursos/04-cloud-y-kubernetes/): tu nube + módulo 4 (Kubernetes) | Preguntas de esa nube |
 | 7 | [Curso 06](cursos/06-seguridad/) mód. 1–2 · [Curso 07](cursos/07-apis-y-versionado/) mód. 1–2 | Preguntas de seguridad y de versionado |
-| 8 | [Curso 08](cursos/08-system-design/), módulos 3 y 5 | 3 [incidentes](casos-de-estudio/02-incidentes-en-produccion.md) en voz alta |
+| 8 | [Curso 10](cursos/10-mensajeria-y-streaming/) mód. 1–2 · [Curso 08](cursos/08-system-design/) mód. 5 | 3 [incidentes](casos-de-estudio/02-incidentes-en-produccion.md) + 2 [casos de mensajería](mensajeria-eventos/04-casos-y-problemas.md) en voz alta |
 | 9 | [Curso 09](cursos/09-tecnica-de-entrevista/) completo | Escribe tus 6 historias STAR y grábalas |
 | 10 | Repaso de resúmenes | [Simulacro completo](cursos/09-tecnica-de-entrevista/02-simulacros.md) con rúbrica |
 
@@ -38,7 +38,7 @@ Para cambiar de liga, no para aprobar un examen. Unas 8 horas por semana.
 | 3 | [07 · APIs y versionado](cursos/07-apis-y-versionado/) | [versionamiento-apis](versionamiento-apis/) | v1 y v2 conviviendo + contract tests en CI |
 | 4 | [04 · Cloud y Kubernetes](cursos/04-cloud-y-kubernetes/) | tu nube + Kubernetes | Despliegue con cero 502 en rollout |
 | 5 | [06 · Seguridad](cursos/06-seguridad/) | [seguridad-vulnerabilidades](seguridad-vulnerabilidades/) | Modelo de amenazas + 3 vulnerabilidades corregidas |
-| 6 | [05 · Microfrontends](cursos/05-microfrontends/) *(si aplica)* o repaso | [microfrontends](microfrontends/) | Shell + 2 remotes con deploy independiente |
+| 6 | [10 · Mensajería y streaming](cursos/10-mensajeria-y-streaming/) o [05 · Microfrontends](cursos/05-microfrontends/) según el puesto | [mensajeria-eventos](mensajeria-eventos/) o [microfrontends](microfrontends/) | Laboratorio integrador de mensajería (o shell + 2 remotes) |
 | 7 | [08 · System design](cursos/08-system-design/) | los 10 [casos de diseño](casos-de-estudio/01-system-design.md) | 5 diseños escritos y cronometrados |
 | 8 | [09 · Técnica de entrevista](cursos/09-tecnica-de-entrevista/) | repaso de resúmenes | 3 simulacros con otra persona |
 
@@ -48,11 +48,11 @@ Para cambiar de liga, no para aprobar un examen. Unas 8 horas por semana.
 
 | Perfil | Orden recomendado | Dónde te van a apretar |
 |---|---|---|
-| **Backend Java** | 00 → 01 → 07 → 04 → 08 → 06 | JVM, `@Transactional`, Kafka, casos de producción |
-| **Backend Node/TS** | 00 → 02 → 07 → 04 → 08 → 06 | Event loop, tipos en la frontera, shutdown, memoria |
-| **Backend Go / plataforma** | 00 → 03 → 04 → 08 → 07 → 06 | Goroutines y fugas, `context`, pprof, Kubernetes |
+| **Backend Java** | 00 → 01 → 10 → 07 → 04 → 08 → 06 | JVM, `@Transactional`, Kafka, Quarkus, casos de producción |
+| **Backend Node/TS** | 00 → 02 → 10 → 07 → 04 → 08 → 06 | Event loop, tipos en la frontera, shutdown, memoria |
+| **Backend Go / plataforma** | 00 → 03 → 10 → 04 → 08 → 07 → 06 | Goroutines y fugas, `context`, pprof, Kubernetes |
 | **Fullstack con peso frontend** | 00 → 05 → 02 → 07 → 08 | Microfrontends, contratos, performance |
-| **Staff / arquitecto** | 00 → 08 → 07 → 06 → 04 | Trade-offs, migraciones, coste, organización |
+| **Staff / arquitecto** | 00 → 08 → 10 → 07 → 06 → 04 | Trade-offs, event-driven, migraciones, coste, organización |
 | **SRE / DevOps** | 00 → 04 → 08 → 06 → tu lenguaje | Incidentes, observabilidad, fiabilidad, costes |
 
 ---

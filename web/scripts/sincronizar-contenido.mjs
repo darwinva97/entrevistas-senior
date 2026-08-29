@@ -29,6 +29,7 @@ const AREAS = [
   'microfrontends',
   'seguridad-vulnerabilidades',
   'versionamiento-apis',
+  'mensajeria-eventos',
   'casos-de-estudio',
 ];
 

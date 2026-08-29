@@ -19,7 +19,7 @@ Leyenda: `[ ]` no lo domino · `[~]` lo entiendo pero no lo explicaría fluido �
 - [ ] 🧪 Laboratorio: cascada provocada y contenida (tabla de p50/p99)
 
 ### Tu lenguaje (marca el que apliques)
-- [ ] 01 · Java: JVM y GC · concurrencia/JMM · Spring y transacciones · Kafka · laboratorio de diagnóstico
+- [ ] 01 · Java: JVM y GC · concurrencia/JMM · Spring y transacciones · Kafka · laboratorio de diagnóstico · Quarkus y native
 - [ ] 02 · TypeScript/Node: tipos · event loop y memoria · arquitectura de servicios · laboratorio
 - [ ] 03 · Go: concurrencia y context · runtime y GC · servicios de producción · pprof
 - [ ] 🧪 Laboratorio: un memory leak reproducido y diagnosticado con el profiler
@@ -62,6 +62,13 @@ Leyenda: `[ ]` no lo domino · `[~]` lo entiendo pero no lo explicaría fluido �
 - [ ] 2 · Los 5 simulacros hechos y puntuados con rúbrica
 - [ ] 3 · Seis historias STAR escritas y grabadas
 
+### 10 · Mensajería y streaming
+- [ ] 1 · Colas y mensajería: semánticas, contratos, dimensionado, DLQ
+- [ ] 2 · Kafka por dentro: réplicas/ISR, particiones, consumer groups, EOS
+- [ ] 3 · RabbitMQ en producción: AMQP, quorum queues, prefetch, TTL+DLX
+- [ ] 4 · Arquitecturas event-driven: estilos de evento, schema evolution, CQRS, gobernanza
+- [ ] 🧪 Laboratorio integrador: los 8 ejercicios de operación (lag, rebalance, outbox, alarmas)
+
 ---
 
 ## Banco de preguntas
@@ -73,6 +80,7 @@ Marca cuando puedas responder **todas** las de ese fichero sin mirar. Consulta e
 | Java | [01 Core avanzado](java-microservicios/01-java-core-avanzado.md) | 15 | [ ] |
 | Java | [02 Spring y microservicios](java-microservicios/02-spring-y-microservicios.md) | 16 | [ ] |
 | Java | [03 Casos y problemas](java-microservicios/03-casos-y-problemas.md) | 15 | [ ] |
+| Java | [04 Quarkus y native](java-microservicios/04-quarkus-y-native.md) | 16 | [ ] |
 | TypeScript | [01 TypeScript avanzado](typescript-microservicios/01-typescript-avanzado.md) | 16 | [ ] |
 | TypeScript | [02 Node y microservicios](typescript-microservicios/02-node-y-microservicios.md) | 16 | [ ] |
 | TypeScript | [03 Casos y problemas](typescript-microservicios/03-casos-y-problemas.md) | 16 | [ ] |
@@ -94,8 +102,15 @@ Marca cuando puedas responder **todas** las de ese fichero sin mirar. Consulta e
 | APIs | [01 Versionamiento](versionamiento-apis/01-versionamiento-de-apis.md) | 16 | [ ] |
 | APIs | [02 Servicios y datos](versionamiento-apis/02-versionamiento-de-servicios-y-datos.md) | 14 | [ ] |
 | APIs | [03 Casos](versionamiento-apis/03-casos-y-problemas.md) | 10 | [ ] |
+| Mensajería | [01 Fundamentos](mensajeria-eventos/01-fundamentos-de-mensajeria.md) | 15 | [ ] |
+| Mensajería | [02 Kafka](mensajeria-eventos/02-kafka.md) | 18 | [ ] |
+| Mensajería | [03 RabbitMQ y otros brokers](mensajeria-eventos/03-rabbitmq-y-otros-brokers.md) | 14 | [ ] |
+| Mensajería | [04 Casos y problemas](mensajeria-eventos/04-casos-y-problemas.md) | 12 | [ ] |
 | Casos | [01 System design](casos-de-estudio/01-system-design.md) | 10 | [ ] |
 | Casos | [02 Incidentes](casos-de-estudio/02-incidentes-en-produccion.md) | 10 | [ ] |
+| Casos | [03 Nuevos requerimientos](casos-de-estudio/03-nuevos-requerimientos.md) | 10 | [ ] |
+| Casos | [04 Diagnóstico multi-entorno](casos-de-estudio/04-diagnostico-multientorno.md) | 10 | [ ] |
+| Casos | [05 Versionado y releases](casos-de-estudio/05-versionado-y-releases.md) | 10 | [ ] |
 
 ---
 

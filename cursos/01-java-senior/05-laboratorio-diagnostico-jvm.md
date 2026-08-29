@@ -145,4 +145,4 @@ Los **15 casos** de [`java-microservicios/03-casos-y-problemas.md`](../../java-m
 
 ---
 
-**Anterior:** [Módulo 4](04-kafka-y-patrones-distribuidos.md) · **Fin del curso 01.** Sigue con [07 APIs y versionado](../07-apis-y-versionado/) o [08 System design](../08-system-design/).
+**Anterior:** [Módulo 4](04-kafka-y-patrones-distribuidos.md) · **Siguiente:** [Módulo 6 · Quarkus y compilación nativa](06-quarkus.md)

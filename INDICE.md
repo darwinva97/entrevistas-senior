@@ -2,13 +2,13 @@
 
 > Fichero generado por `scripts/generar-indice.mjs`. **No lo edites a mano:** ejecuta `npm run indice`.
 
-**389 preguntas** en 10 áreas · **160** marcadas como `[CASO]` (análisis de problemas).
+**494 preguntas** en 11 áreas · **209** marcadas como `[CASO]` (análisis de problemas).
 
 ¿No sabes por dónde empezar? Los [cursos](cursos/) enseñan lo necesario para responderlas.
 
 | Área | Preguntas | [CASO] |
 |---|:-:|:-:|
-| ☕ [Java Senior + Microservicios](#java-senior-microservicios) | 46 | 15 |
+| ☕ [Java Senior + Microservicios](#java-senior-microservicios) | 62 | 17 |
 | 🟦 [TypeScript Senior + Microservicios](#typescript-senior-microservicios) | 48 | 26 |
 | 🐹 [Golang Senior + Microservicios](#golang-senior-microservicios) | 55 | 18 |
 | ☁️ [AWS](#aws) | 47 | 16 |
@@ -17,14 +17,15 @@
 | 🧩 [Microfrontends](#microfrontends) | 30 | 12 |
 | 🔐 [Seguridad y Vulnerabilidades](#seguridad-y-vulnerabilidades) | 42 | 13 |
 | 🔄 [Versionamiento de APIs](#versionamiento-de-apis) | 40 | 16 |
-| 🧠 [Casos de Estudio Transversales](#casos-de-estudio-transversales) | 20 | 20 |
-| **Total** | **389** | **160** |
+| 📨 [Mensajería y Event-Driven (Kafka · RabbitMQ · Colas)](#mensajería-y-event-driven-kafka-rabbitmq-colas) | 59 | 17 |
+| 🧠 [Casos de Estudio Transversales](#casos-de-estudio-transversales) | 50 | 50 |
+| **Total** | **494** | **209** |
 
 ---
 
 ## ☕ Java Senior + Microservicios
 
-Carpeta: [`java-microservicios/`](java-microservicios/) · 46 preguntas
+Carpeta: [`java-microservicios/`](java-microservicios/) · 62 preguntas
 
 ### Java Core Avanzado — Preguntas de Entrevista Senior
 
@@ -86,6 +87,27 @@ Carpeta: [`java-microservicios/`](java-microservicios/) · 46 preguntas
 13. [HikariCP agotado: "Connection is not available, request timed out after 30000ms"](java-microservicios/03-casos-y-problemas.md#13-hikaricp-agotado-connection-is-not-available-request-timed-out-after-30000ms) `[CASO]` — <sub>Base de datos / Spring</sub>
 14. [Pérdida de mensajes: un evento de pedido nunca llegó a facturación](java-microservicios/03-casos-y-problemas.md#14-pérdida-de-mensajes-un-evento-de-pedido-nunca-llegó-a-facturación) `[CASO]` — <sub>Kafka</sub>
 15. [Hot partition en Kafka: una partición concentra el tráfico y un consumer va ahogado](java-microservicios/03-casos-y-problemas.md#15-hot-partition-en-kafka-una-partición-concentra-el-tráfico-y-un-consumer-va-ahogado) `[CASO]` — <sub>Kafka</sub>
+
+### Quarkus, MicroProfile y Native Image — Preguntas de Entrevista Senior
+
+[`04-quarkus-y-native.md`](java-microservicios/04-quarkus-y-native.md) · 16 preguntas
+
+1. [¿Qué hace diferente a Quarkus de Spring Boot por dentro? Build-time processing](java-microservicios/04-quarkus-y-native.md#1-qué-hace-diferente-a-quarkus-de-spring-boot-por-dentro-build-time-processing) — <sub>Quarkus internals</sub>
+2. [ArC: el CDI de Quarkus — qué implementa, qué no, y el error del "bean eliminado"](java-microservicios/04-quarkus-y-native.md#2-arc-el-cdi-de-quarkus--qué-implementa-qué-no-y-el-error-del-bean-eliminado) — <sub>Quarkus / CDI</sub>
+3. [GraalVM Native Image: closed-world assumption — qué se rompe y cómo se registra](java-microservicios/04-quarkus-y-native.md#3-graalvm-native-image-closed-world-assumption--qué-se-rompe-y-cómo-se-registra) — <sub>Native Image</sub>
+4. [JVM vs native: ¿cuándo compensa de verdad compilar a native?](java-microservicios/04-quarkus-y-native.md#4-jvm-vs-native-cuándo-compensa-de-verdad-compilar-a-native) — <sub>Native Image / Arquitectura</sub>
+5. [Mutiny y el modelo reactivo de Quarkus: Uni, Multi, event loop y @Blocking](java-microservicios/04-quarkus-y-native.md#5-mutiny-y-el-modelo-reactivo-de-quarkus-uni-multi-event-loop-y-blocking) — <sub>Reactivo / Mutiny</sub>
+6. [RESTEasy Reactive: imperativo y reactivo en el mismo stack — ¿cómo decide el dispatch?](java-microservicios/04-quarkus-y-native.md#6-resteasy-reactive-imperativo-y-reactivo-en-el-mismo-stack--cómo-decide-el-dispatch) — <sub>REST / Quarkus</sub>
+7. [Panache: active record vs repository, límites y Panache reactive](java-microservicios/04-quarkus-y-native.md#7-panache-active-record-vs-repository-límites-y-panache-reactive) — <sub>Persistencia / Panache</sub>
+8. [Configuración en Quarkus: MicroProfile Config, @ConfigMapping, perfiles y la trampa build-time](java-microservicios/04-quarkus-y-native.md#8-configuración-en-quarkus-microprofile-config-configmapping-perfiles-y-la-trampa-build-time) — <sub>Configuración</sub>
+9. [SmallRye Fault Tolerance: semántica exacta de @Retry, @Timeout, @CircuitBreaker, @Bulkhead y @Fallback](java-microservicios/04-quarkus-y-native.md#9-smallrye-fault-tolerance-semántica-exacta-de-retry-timeout-circuitbreaker-bulkhead-y-fallback) — <sub>Resiliencia / MicroProfile</sub>
+10. [Reactive Messaging con Kafka: channels, ack, commit strategies y concurrencia](java-microservicios/04-quarkus-y-native.md#10-reactive-messaging-con-kafka-channels-ack-commit-strategies-y-concurrencia) — <sub>Mensajería / Kafka</sub>
+11. [Dev mode y Dev Services: live reload, testcontainers automáticos y continuous testing](java-microservicios/04-quarkus-y-native.md#11-dev-mode-y-dev-services-live-reload-testcontainers-automáticos-y-continuous-testing) — <sub>Developer Experience</sub>
+12. [Testing en Quarkus: @QuarkusTest, @QuarkusIntegrationTest, @InjectMock y test profiles](java-microservicios/04-quarkus-y-native.md#12-testing-en-quarkus-quarkustest-quarkusintegrationtest-injectmock-y-test-profiles) — <sub>Testing</sub>
+13. [Transacciones en Quarkus: Narayana, propagación y el choque bloqueante/reactivo](java-microservicios/04-quarkus-y-native.md#13-transacciones-en-quarkus-narayana-propagación-y-el-choque-bloqueantereactivo) — <sub>Transacciones</sub>
+14. [MicroProfile REST Client: interfaces tipadas, fault tolerance y propagación de contexto](java-microservicios/04-quarkus-y-native.md#14-microprofile-rest-client-interfaces-tipadas-fault-tolerance-y-propagación-de-contexto) — <sub>Integración / MicroProfile</sub>
+15. [\[CASO\] En JVM funciona, el binario native peta en producción al deserializar un payload](java-microservicios/04-quarkus-y-native.md#15-caso-en-jvm-funciona-el-binario-native-peta-en-producción-al-deserializar-un-payload) `[CASO]` — <sub>Native Image / Troubleshooting</sub>
+16. [\[CASO\] Migrar 40 microservicios Spring Boot a Quarkus: ¿tiene sentido? Plan y criterios](java-microservicios/04-quarkus-y-native.md#16-caso-migrar-40-microservicios-spring-boot-a-quarkus-tiene-sentido-plan-y-criterios) `[CASO]` — <sub>Arquitectura / Migración</sub>
 
 ---
 
@@ -565,9 +587,94 @@ Carpeta: [`versionamiento-apis/`](versionamiento-apis/) · 40 preguntas
 
 ---
 
+## 📨 Mensajería y Event-Driven (Kafka · RabbitMQ · Colas)
+
+Carpeta: [`mensajeria-eventos/`](mensajeria-eventos/) · 59 preguntas
+
+### Fundamentos de Mensajería y Arquitecturas Event-Driven — Preguntas de Entrevista Senior
+
+[`01-fundamentos-de-mensajeria.md`](mensajeria-eventos/01-fundamentos-de-mensajeria.md) · 15 preguntas
+
+1. [¿Por qué meterías una cola entre dos servicios? ¿Qué compras y qué pagas?](mensajeria-eventos/01-fundamentos-de-mensajeria.md#1-por-qué-meterías-una-cola-entre-dos-servicios-qué-compras-y-qué-pagas) — <sub>Arquitectura</sub>
+2. [Semánticas de entrega: at-most-once, at-least-once, exactly-once. ¿Por qué exactly-once end-to-end es un mito?](mensajeria-eventos/01-fundamentos-de-mensajeria.md#2-semánticas-de-entrega-at-most-once-at-least-once-exactly-once-por-qué-exactly-once-end-to-end-es-un-mito) — <sub>Semánticas de entrega</sub>
+3. [¿Cómo haces un consumidor idempotente? Claves de idempotencia, tabla inbox, dedupe y TTL](mensajeria-eventos/01-fundamentos-de-mensajeria.md#3-cómo-haces-un-consumidor-idempotente-claves-de-idempotencia-tabla-inbox-dedupe-y-ttl) — <sub>Fiabilidad</sub>
+4. [Patrón outbox transaccional: ¿por qué el dual write está prohibido y cómo lo implementa Debezium?](mensajeria-eventos/01-fundamentos-de-mensajeria.md#4-patrón-outbox-transaccional-por-qué-el-dual-write-está-prohibido-y-cómo-lo-implementa-debezium) — <sub>Patrones de integración</sub>
+5. [Ordering: ¿qué garantiza realmente un broker y qué haces cuando el orden importa de verdad?](mensajeria-eventos/01-fundamentos-de-mensajeria.md#5-ordering-qué-garantiza-realmente-un-broker-y-qué-haces-cuando-el-orden-importa-de-verdad) — <sub>Ordering / Particionado</sub>
+6. [Backpressure y colas: ley de Little, productor más rápido que el consumidor, límites y load shedding](mensajeria-eventos/01-fundamentos-de-mensajeria.md#6-backpressure-y-colas-ley-de-little-productor-más-rápido-que-el-consumidor-límites-y-load-shedding) — <sub>Capacidad / Performance</sub>
+7. [Dead letter queues: ¿cuándo envías un mensaje, qué metadatos guardas y cómo reprocesas?](mensajeria-eventos/01-fundamentos-de-mensajeria.md#7-dead-letter-queues-cuándo-envías-un-mensaje-qué-metadatos-guardas-y-cómo-reprocesas) — <sub>Fiabilidad</sub>
+8. [Event notification vs event-carried state transfer vs event sourcing: diferencias y cuándo usar cada uno](mensajeria-eventos/01-fundamentos-de-mensajeria.md#8-event-notification-vs-event-carried-state-transfer-vs-event-sourcing-diferencias-y-cuándo-usar-cada-uno) — <sub>Patrones event-driven</sub>
+9. [Event sourcing en serio: qué resuelve, qué complica y cuándo NO usarlo](mensajeria-eventos/01-fundamentos-de-mensajeria.md#9-event-sourcing-en-serio-qué-resuelve-qué-complica-y-cuándo-no-usarlo) — <sub>Event Sourcing</sub>
+10. [CQRS: ¿qué es de verdad, qué relación tiene con los eventos y cómo manejas la consistencia eventual en la UI?](mensajeria-eventos/01-fundamentos-de-mensajeria.md#10-cqrs-qué-es-de-verdad-qué-relación-tiene-con-los-eventos-y-cómo-manejas-la-consistencia-eventual-en-la-ui) — <sub>CQRS</sub>
+11. [Sagas: coreografía vs orquestación, compensaciones, timeouts y dónde vive el estado](mensajeria-eventos/01-fundamentos-de-mensajeria.md#11-sagas-coreografía-vs-orquestación-compensaciones-timeouts-y-dónde-vive-el-estado) — <sub>Transacciones distribuidas</sub>
+12. [Colas de comando vs topics de eventos: ¿qué diferencia semántica hay y quién es dueño del contrato?](mensajeria-eventos/01-fundamentos-de-mensajeria.md#12-colas-de-comando-vs-topics-de-eventos-qué-diferencia-semántica-hay-y-quién-es-dueño-del-contrato) — <sub>Contratos / Diseño</sub>
+13. [Schema evolution en eventos: compatibilidad backward/forward/full, schema registry y cómo migrar consumidores](mensajeria-eventos/01-fundamentos-de-mensajeria.md#13-schema-evolution-en-eventos-compatibilidad-backwardforwardfull-schema-registry-y-cómo-migrar-consumidores) — <sub>Schema evolution</sub>
+14. [Reintentos: backoff exponencial con jitter, retry topics, retry budget y cuándo NO reintentar](mensajeria-eventos/01-fundamentos-de-mensajeria.md#14-reintentos-backoff-exponencial-con-jitter-retry-topics-retry-budget-y-cuándo-no-reintentar) — <sub>Resiliencia</sub>
+15. [\[CASO\] Comunicación entre el servicio de pedidos y 6 servicios downstream](mensajeria-eventos/01-fundamentos-de-mensajeria.md#15-caso-comunicación-entre-el-servicio-de-pedidos-y-6-servicios-downstream) `[CASO]` — <sub>Diseño de sistemas</sub>
+
+### Apache Kafka — Preguntas de Entrevista Senior
+
+[`02-kafka.md`](mensajeria-eventos/02-kafka.md) · 18 preguntas
+
+1. [Arquitectura de Kafka: brokers, topics, particiones, réplicas e ISR. ¿Por qué decimos que es un log distribuido y no una cola?](mensajeria-eventos/02-kafka.md#1-arquitectura-de-kafka-brokers-topics-particiones-réplicas-e-isr-por-qué-decimos-que-es-un-log-distribuido-y-no-una-cola) — <sub>Arquitectura</sub>
+2. [KRaft vs ZooKeeper: ¿qué cambió exactamente y por qué el proyecto migró?](mensajeria-eventos/02-kafka.md#2-kraft-vs-zookeeper-qué-cambió-exactamente-y-por-qué-el-proyecto-migró) — <sub>Arquitectura</sub>
+3. [El productor por dentro: batching, `linger.ms`, compresión, particionador sticky, `acks` e idempotencia (PID + secuencias)](mensajeria-eventos/02-kafka.md#3-el-productor-por-dentro-batching-lingerms-compresión-particionador-sticky-acks-e-idempotencia-pid--secuencias) — <sub>Productor</sub>
+4. [¿Cuándo se puede perder un mensaje en Kafka? Enumera todas las vías](mensajeria-eventos/02-kafka.md#4-cuándo-se-puede-perder-un-mensaje-en-kafka-enumera-todas-las-vías) — <sub>Fiabilidad</sub>
+5. [Consumer groups y rebalancing: eager vs cooperative, static membership y los dos timeouts](mensajeria-eventos/02-kafka.md#5-consumer-groups-y-rebalancing-eager-vs-cooperative-static-membership-y-los-dos-timeouts) — <sub>Consumidor</sub>
+6. [Gestión de offsets: auto-commit, commit manual, batch vs record, y qué pasa tras un crash](mensajeria-eventos/02-kafka.md#6-gestión-de-offsets-auto-commit-commit-manual-batch-vs-record-y-qué-pasa-tras-un-crash) — <sub>Consumidor</sub>
+7. [Exactly-once en Kafka: transacciones, `read_committed`, `transactional.id` y zombie fencing. ¿Qué cubre y qué no?](mensajeria-eventos/02-kafka.md#7-exactly-once-en-kafka-transacciones-read_committed-transactionalid-y-zombie-fencing-qué-cubre-y-qué-no) — <sub>Fiabilidad</sub>
+8. [¿Cómo eliges el número de particiones de un topic y qué cuesta cambiarlo después?](mensajeria-eventos/02-kafka.md#8-cómo-eliges-el-número-de-particiones-de-un-topic-y-qué-cuesta-cambiarlo-después) — <sub>Diseño</sub>
+9. [Retención vs compactación: `delete`, `compact`, tombstones y casos de uso de compacted topics](mensajeria-eventos/02-kafka.md#9-retención-vs-compactación-delete-compact-tombstones-y-casos-de-uso-de-compacted-topics) — <sub>Almacenamiento</sub>
+10. [Consumer lag: qué es exactamente, cómo se mide y cómo se ataca](mensajeria-eventos/02-kafka.md#10-consumer-lag-qué-es-exactamente-cómo-se-mide-y-cómo-se-ataca) — <sub>Operación</sub>
+11. [Kafka Streams: topología, state stores, RocksDB, changelogs, ventanas y EOS. ¿Cuándo Streams y cuándo un consumidor plano?](mensajeria-eventos/02-kafka.md#11-kafka-streams-topología-state-stores-rocksdb-changelogs-ventanas-y-eos-cuándo-streams-y-cuándo-un-consumidor-plano) — <sub>Procesamiento</sub>
+12. [Schema Registry: formatos, modos de compatibilidad, subject naming strategies y cómo se despliega un cambio de esquema](mensajeria-eventos/02-kafka.md#12-schema-registry-formatos-modos-de-compatibilidad-subject-naming-strategies-y-cómo-se-despliega-un-cambio-de-esquema) — <sub>Ecosistema</sub>
+13. [Réplicas y durabilidad: `replication.factor`, `min.insync.replicas`, unclean election y rack awareness — el triángulo durabilidad/disponibilidad/latencia](mensajeria-eventos/02-kafka.md#13-réplicas-y-durabilidad-replicationfactor-mininsyncreplicas-unclean-election-y-rack-awareness--el-triángulo-durabilidaddisponibilidadlatencia) — <sub>Fiabilidad</sub>
+14. [Kafka Connect: workers, source/sink, converters, DLQ y casos típicos (CDC, data lake)](mensajeria-eventos/02-kafka.md#14-kafka-connect-workers-sourcesink-converters-dlq-y-casos-típicos-cdc-data-lake) — <sub>Ecosistema</sub>
+15. [Tuning de rendimiento: ¿por qué Kafka es rápido y dónde está normalmente el cuello de botella?](mensajeria-eventos/02-kafka.md#15-tuning-de-rendimiento-por-qué-kafka-es-rápido-y-dónde-está-normalmente-el-cuello-de-botella) — <sub>Rendimiento</sub>
+16. [Multi-cluster y disaster recovery: MirrorMaker 2, Cluster Linking, active-passive vs active-active, offset translation y RPO/RTO](mensajeria-eventos/02-kafka.md#16-multi-cluster-y-disaster-recovery-mirrormaker-2-cluster-linking-active-passive-vs-active-active-offset-translation-y-rporto) — <sub>Operación / DR</sub>
+17. [\[CASO\] El lag del consumer group de facturación crece sin parar desde ayer, pero el throughput de entrada no ha cambiado. Diagnostica](mensajeria-eventos/02-kafka.md#17-caso-el-lag-del-consumer-group-de-facturación-crece-sin-parar-desde-ayer-pero-el-throughput-de-entrada-no-ha-cambiado-diagnostica) `[CASO]` — <sub>Operación / Troubleshooting</sub>
+18. [\[CASO\] Tras un failover de broker aparecieron miles de duplicados en downstream. ¿Por qué y cómo lo evitas?](mensajeria-eventos/02-kafka.md#18-caso-tras-un-failover-de-broker-aparecieron-miles-de-duplicados-en-downstream-por-qué-y-cómo-lo-evitas) `[CASO]` — <sub>Fiabilidad / Troubleshooting</sub>
+
+### RabbitMQ y Otros Brokers (SQS · SNS · NATS · Pulsar) — Preguntas de Entrevista Senior
+
+[`03-rabbitmq-y-otros-brokers.md`](mensajeria-eventos/03-rabbitmq-y-otros-brokers.md) · 14 preguntas
+
+1. [Explica el modelo AMQP 0-9-1: exchanges, bindings, routing keys y colas. ¿Cómo modelarías un routing complejo?](mensajeria-eventos/03-rabbitmq-y-otros-brokers.md#1-explica-el-modelo-amqp-0-9-1-exchanges-bindings-routing-keys-y-colas-cómo-modelarías-un-routing-complejo) — <sub>RabbitMQ / AMQP</sub>
+2. [Acks de consumidor y publisher confirms en RabbitMQ: ¿qué garantiza cada mecanismo y qué pierdes sin cada uno?](mensajeria-eventos/03-rabbitmq-y-otros-brokers.md#2-acks-de-consumidor-y-publisher-confirms-en-rabbitmq-qué-garantiza-cada-mecanismo-y-qué-pierdes-sin-cada-uno) — <sub>RabbitMQ / Fiabilidad</sub>
+3. [Quorum queues vs classic mirrored queues: ¿por qué las mirrored están deprecadas y qué límites tienen las quorum?](mensajeria-eventos/03-rabbitmq-y-otros-brokers.md#3-quorum-queues-vs-classic-mirrored-queues-por-qué-las-mirrored-están-deprecadas-y-qué-límites-tienen-las-quorum) — <sub>RabbitMQ / Alta disponibilidad</sub>
+4. [`basic.qos` / prefetch: ¿qué controla exactamente y cómo lo dimensionas?](mensajeria-eventos/03-rabbitmq-y-otros-brokers.md#4-basicqos--prefetch-qué-controla-exactamente-y-cómo-lo-dimensionas) — <sub>RabbitMQ / Rendimiento</sub>
+5. [TTL, dead-letter exchanges y colas de retraso: patrón de retry con backoff y sus trampas](mensajeria-eventos/03-rabbitmq-y-otros-brokers.md#5-ttl-dead-letter-exchanges-y-colas-de-retraso-patrón-de-retry-con-backoff-y-sus-trampas) — <sub>RabbitMQ / Patrones</sub>
+6. [Flow control en RabbitMQ: memory/disk alarms y credit flow. ¿Qué ve el productor cuando el broker se defiende?](mensajeria-eventos/03-rabbitmq-y-otros-brokers.md#6-flow-control-en-rabbitmq-memorydisk-alarms-y-credit-flow-qué-ve-el-productor-cuando-el-broker-se-defiende) — <sub>RabbitMQ / Operación</sub>
+7. [Clustering y particiones de red en RabbitMQ: `pause_minority`, ¿por qué no cruzar regiones, y qué papel juegan federation y shovel?](mensajeria-eventos/03-rabbitmq-y-otros-brokers.md#7-clustering-y-particiones-de-red-en-rabbitmq-pause_minority-por-qué-no-cruzar-regiones-y-qué-papel-juegan-federation-y-shovel) — <sub>RabbitMQ / Distribución</sub>
+8. [RabbitMQ Streams: ¿qué añaden frente a las colas clásicas y cuándo los elegirías frente a Kafka?](mensajeria-eventos/03-rabbitmq-y-otros-brokers.md#8-rabbitmq-streams-qué-añaden-frente-a-las-colas-clásicas-y-cuándo-los-elegirías-frente-a-kafka) — <sub>RabbitMQ / Streams</sub>
+9. [Kafka vs RabbitMQ: criterio de elección de un senior](mensajeria-eventos/03-rabbitmq-y-otros-brokers.md#9-kafka-vs-rabbitmq-criterio-de-elección-de-un-senior) — <sub>Arquitectura / Comparativa</sub>
+10. [SQS y SNS: standard vs FIFO, visibility timeout, DLQs y el patrón fan-out. ¿Qué límites y costes hay que conocer?](mensajeria-eventos/03-rabbitmq-y-otros-brokers.md#10-sqs-y-sns-standard-vs-fifo-visibility-timeout-dlqs-y-el-patrón-fan-out-qué-límites-y-costes-hay-que-conocer) — <sub>AWS / Mensajería gestionada</sub>
+11. [NATS y JetStream: ¿qué garantiza cada capa y dónde encajan frente a Kafka y RabbitMQ?](mensajeria-eventos/03-rabbitmq-y-otros-brokers.md#11-nats-y-jetstream-qué-garantiza-cada-capa-y-dónde-encajan-frente-a-kafka-y-rabbitmq) — <sub>NATS</sub>
+12. [Apache Pulsar: separación compute/storage, multi-tenancy y tipos de subscription. ¿Cuándo tendría sentido frente a Kafka?](mensajeria-eventos/03-rabbitmq-y-otros-brokers.md#12-apache-pulsar-separación-computestorage-multi-tenancy-y-tipos-de-subscription-cuándo-tendría-sentido-frente-a-kafka) — <sub>Pulsar</sub>
+13. [Producción: la memoria del nodo RabbitMQ sube hasta disparar la memory alarm y los publishers se quedan colgados. Las colas crecen. Diagnostica y resuelve.](mensajeria-eventos/03-rabbitmq-y-otros-brokers.md#13-producción-la-memoria-del-nodo-rabbitmq-sube-hasta-disparar-la-memory-alarm-y-los-publishers-se-quedan-colgados-las-colas-crecen-diagnostica-y-resuelve) `[CASO]` — <sub>RabbitMQ / Operación</sub>
+14. [Un patrón de retry con `requeue=true` y un mensaje envenenado tiene a 4 consumidores al 100% de CPU en bucle. ¿Qué pasó y cómo se arregla bien?](mensajeria-eventos/03-rabbitmq-y-otros-brokers.md#14-un-patrón-de-retry-con-requeuetrue-y-un-mensaje-envenenado-tiene-a-4-consumidores-al-100-de-cpu-en-bucle-qué-pasó-y-cómo-se-arregla-bien) `[CASO]` — <sub>RabbitMQ / Patrones de error</sub>
+
+### Mensajería: Casos y Problemas de Producción — Preguntas de Entrevista Senior
+
+[`04-casos-y-problemas.md`](mensajeria-eventos/04-casos-y-problemas.md) · 12 preguntas
+
+1. [Rebalance storm: el consumer group entra en bucle de rebalanceos](mensajeria-eventos/04-casos-y-problemas.md#1-rebalance-storm-el-consumer-group-entra-en-bucle-de-rebalanceos) `[CASO]` — <sub>Kafka / Consumer groups</sub>
+2. [Partición caliente: una de 24 concentra el 40% del tráfico](mensajeria-eventos/04-casos-y-problemas.md#2-partición-caliente-una-de-24-concentra-el-40-del-tráfico) `[CASO]` — <sub>Kafka / Particionado</sub>
+3. [Duplicados masivos tras un incidente: cobros repetidos downstream](mensajeria-eventos/04-casos-y-problemas.md#3-duplicados-masivos-tras-un-incidente-cobros-repetidos-downstream) `[CASO]` — <sub>Kafka / Idempotencia y offsets</sub>
+4. [Mensajes fuera de orden tras escalar de 1 a 8 consumidores](mensajeria-eventos/04-casos-y-problemas.md#4-mensajes-fuera-de-orden-tras-escalar-de-1-a-8-consumidores) `[CASO]` — <sub>Kafka / Ordering</sub>
+5. [El outbox se atasca: eventos que llegan horas tarde](mensajeria-eventos/04-casos-y-problemas.md#5-el-outbox-se-atasca-eventos-que-llegan-horas-tarde) `[CASO]` — <sub>Outbox pattern / CDC</sub>
+6. [DLQ desbordada un lunes: 200.000 mensajes y nadie sabe cuáles reprocesar](mensajeria-eventos/04-casos-y-problemas.md#6-dlq-desbordada-un-lunes-200000-mensajes-y-nadie-sabe-cuáles-reprocesar) `[CASO]` — <sub>Operación / Dead-letter queues</sub>
+7. [Kafka "pierde" mensajes de auditoría: la conciliación mensual detecta huecos](mensajeria-eventos/04-casos-y-problemas.md#7-kafka-pierde-mensajes-de-auditoría-la-conciliación-mensual-detecta-huecos) `[CASO]` — <sub>Kafka / Durabilidad</sub>
+8. [RabbitMQ: la cola que crece hasta tirar el nodo cada Black Friday](mensajeria-eventos/04-casos-y-problemas.md#8-rabbitmq-la-cola-que-crece-hasta-tirar-el-nodo-cada-black-friday) `[CASO]` — <sub>RabbitMQ / Capacidad y backpressure</sub>
+9. [Schema roto en cascada: cinco consumidores muertos a la vez](mensajeria-eventos/04-casos-y-problemas.md#9-schema-roto-en-cascada-cinco-consumidores-muertos-a-la-vez) `[CASO]` — <sub>Contratos de eventos / Schema evolution</sub>
+10. [Consumidor lento por dependencia: cada mensaje llama a una API con p99 de 3 s](mensajeria-eventos/04-casos-y-problemas.md#10-consumidor-lento-por-dependencia-cada-mensaje-llama-a-una-api-con-p99-de-3-s) `[CASO]` — <sub>Consumidores / Throughput y dependencias</sub>
+11. [Saga colgada: pedidos 6 horas en RESERVANDO_STOCK](mensajeria-eventos/04-casos-y-problemas.md#11-saga-colgada-pedidos-6-horas-en-reservando_stock) `[CASO]` — <sub>Sagas / Workflows distribuidos</sub>
+12. [Migración de RabbitMQ a Kafka en caliente, sin parar producción](mensajeria-eventos/04-casos-y-problemas.md#12-migración-de-rabbitmq-a-kafka-en-caliente-sin-parar-producción) `[CASO]` — <sub>Migraciones / Arquitectura de mensajería</sub>
+
+---
+
 ## 🧠 Casos de Estudio Transversales
 
-Carpeta: [`casos-de-estudio/`](casos-de-estudio/) · 20 preguntas
+Carpeta: [`casos-de-estudio/`](casos-de-estudio/) · 50 preguntas
 
 ### Casos de estudio: System Design (nivel senior)
 
@@ -598,6 +705,51 @@ Carpeta: [`casos-de-estudio/`](casos-de-estudio/) · 20 preguntas
 8. [Funciona en staging pero degrada en producción](casos-de-estudio/02-incidentes-en-produccion.md#8-funciona-en-staging-pero-degrada-en-producción) `[CASO]` — <sub>Entornos / Metodología</sub>
 9. [Una dependencia externa (pasarela de pagos) está lenta y arrastra todo el sistema](casos-de-estudio/02-incidentes-en-produccion.md#9-una-dependencia-externa-pasarela-de-pagos-está-lenta-y-arrastra-todo-el-sistema) `[CASO]` — <sub>Resiliencia / Aislamiento de fallos</sub>
 10. [Pérdida de mensajes entre dos servicios detectada por conciliación](casos-de-estudio/02-incidentes-en-produccion.md#10-pérdida-de-mensajes-entre-dos-servicios-detectada-por-conciliación) `[CASO]` — <sub>Mensajería / Auditoría de datos</sub>
+
+### Casos de estudio: Análisis de Nuevos Requerimientos (nivel senior)
+
+[`03-nuevos-requerimientos.md`](casos-de-estudio/03-nuevos-requerimientos.md) · 10 preguntas
+
+1. ["Necesitamos que los usuarios puedan pagar en cuotas"](casos-de-estudio/03-nuevos-requerimientos.md#1-necesitamos-que-los-usuarios-puedan-pagar-en-cuotas) `[CASO]` — <sub>Descubrimiento / Pagos</sub>
+2. ["Es solo añadir un campo al formulario"](casos-de-estudio/03-nuevos-requerimientos.md#2-es-solo-añadir-un-campo-al-formulario) `[CASO]` — <sub>Análisis de impacto / Contratos</sub>
+3. [Feature nueva sobre un monolito legacy sin tests](casos-de-estudio/03-nuevos-requerimientos.md#3-feature-nueva-sobre-un-monolito-legacy-sin-tests) `[CASO]` — <sub>Legacy / Estrategia técnica</sub>
+4. ["Para el viernes"](casos-de-estudio/03-nuevos-requerimientos.md#4-para-el-viernes) `[CASO]` — <sub>Negociación / Deuda técnica</sub>
+5. [Integración con un tercero mal documentado](casos-de-estudio/03-nuevos-requerimientos.md#5-integración-con-un-tercero-mal-documentado) `[CASO]` — <sub>Integraciones / Riesgo</sub>
+6. ["Quiero un dashboard en tiempo real"](casos-de-estudio/03-nuevos-requerimientos.md#6-quiero-un-dashboard-en-tiempo-real) `[CASO]` — <sub>Producto / Datos</sub>
+7. [Romper un contrato público con clientes externos activos](casos-de-estudio/03-nuevos-requerimientos.md#7-romper-un-contrato-público-con-clientes-externos-activos) `[CASO]` — <sub>APIs públicas / Versionado</sub>
+8. [Multi-tenancy sobrevenida](casos-de-estudio/03-nuevos-requerimientos.md#8-multi-tenancy-sobrevenida) `[CASO]` — <sub>Arquitectura / B2B</sub>
+9. ["Hazlo configurable": el motor de reglas prematuro](casos-de-estudio/03-nuevos-requerimientos.md#9-hazlo-configurable-el-motor-de-reglas-prematuro) `[CASO]` — <sub>Diseño / Alcance</sub>
+10. [Herencia de un requerimiento a medio hacer](casos-de-estudio/03-nuevos-requerimientos.md#10-herencia-de-un-requerimiento-a-medio-hacer) `[CASO]` — <sub>Continuidad / Arqueología</sub>
+
+### Casos de estudio: Diagnóstico entre Entornos — QA, Staging y Producción (nivel senior)
+
+[`04-diagnostico-multientorno.md`](casos-de-estudio/04-diagnostico-multientorno.md) · 10 preguntas
+
+1. [El bug que solo se reproduce en QA (nunca en local ni en prod)](casos-de-estudio/04-diagnostico-multientorno.md#1-el-bug-que-solo-se-reproduce-en-qa-nunca-en-local-ni-en-prod) `[CASO]` — <sub>Entornos de QA</sub>
+2. [Todo verde en staging, cae en producción a la primera hora pico](casos-de-estudio/04-diagnostico-multientorno.md#2-todo-verde-en-staging-cae-en-producción-a-la-primera-hora-pico) `[CASO]` — <sub>Staging vs realidad</sub>
+3. [Config drift: el hotfix manual de hace 6 meses](casos-de-estudio/04-diagnostico-multientorno.md#3-config-drift-el-hotfix-manual-de-hace-6-meses) `[CASO]` — <sub>Configuration drift</sub>
+4. ["Funciona en mi máquina": el contenedor pasa CI pero falla en el cluster](casos-de-estudio/04-diagnostico-multientorno.md#4-funciona-en-mi-máquina-el-contenedor-pasa-ci-pero-falla-en-el-cluster) `[CASO]` — <sub>Contenedores / Runtime</sub>
+5. [Certificados y DNS: SSLHandshakeException solo en producción](casos-de-estudio/04-diagnostico-multientorno.md#5-certificados-y-dns-sslhandshakeexception-solo-en-producción) `[CASO]` — <sub>TLS / Redes</sub>
+6. [La migración de BD que pasó en staging y revienta en producción](casos-de-estudio/04-diagnostico-multientorno.md#6-la-migración-de-bd-que-pasó-en-staging-y-revienta-en-producción) `[CASO]` — <sub>Migraciones de BD</sub>
+7. [Feature flags divergentes: el bug imposible de reproducir](casos-de-estudio/04-diagnostico-multientorno.md#7-feature-flags-divergentes-el-bug-imposible-de-reproducir) `[CASO]` — <sub>Feature flags</sub>
+8. [Dependencias distintas por entorno: el mismo commit produce artefactos diferentes](casos-de-estudio/04-diagnostico-multientorno.md#8-dependencias-distintas-por-entorno-el-mismo-commit-produce-artefactos-diferentes) `[CASO]` — <sub>Builds reproducibles</sub>
+9. [Datos de prueba vs datos reales: el buscador perfecto que enloquece en prod](casos-de-estudio/04-diagnostico-multientorno.md#9-datos-de-prueba-vs-datos-reales-el-buscador-perfecto-que-enloquece-en-prod) `[CASO]` — <sub>Datos de prueba</sub>
+10. [Diseña la estrategia de entornos desde cero para 15 microservicios](casos-de-estudio/04-diagnostico-multientorno.md#10-diseña-la-estrategia-de-entornos-desde-cero-para-15-microservicios) `[CASO]` — <sub>Diseño de entornos</sub>
+
+### Casos de estudio: Versionado, Releases y Gestión del Cambio (nivel senior)
+
+[`05-versionado-y-releases.md`](casos-de-estudio/05-versionado-y-releases.md) · 10 preguntas
+
+1. [Diseña la estrategia de branching para 10 equipos sobre 40 microservicios](casos-de-estudio/05-versionado-y-releases.md#1-diseña-la-estrategia-de-branching-para-10-equipos-sobre-40-microservicios) `[CASO]` — <sub>Branching / Delivery</sub>
+2. [Hotfix urgente con main 30 commits por delante](casos-de-estudio/05-versionado-y-releases.md#2-hotfix-urgente-con-main-30-commits-por-delante) `[CASO]` — <sub>Hotfix / Incident response</sub>
+3. [El rollback que no se puede hacer: la migración de BD ya corrió](casos-de-estudio/05-versionado-y-releases.md#3-el-rollback-que-no-se-puede-hacer-la-migración-de-bd-ya-corrió) `[CASO]` — <sub>Migraciones / Rollback</sub>
+4. [Release train vs continuous deployment para una plataforma B2B](casos-de-estudio/05-versionado-y-releases.md#4-release-train-vs-continuous-deployment-para-una-plataforma-b2b) `[CASO]` — <sub>Release management / Cadencia</sub>
+5. [Versionar microservicios: ¿semver de servicios sirve de algo?](casos-de-estudio/05-versionado-y-releases.md#5-versionar-microservicios-semver-de-servicios-sirve-de-algo) `[CASO]` — <sub>Versionado / Contratos</sub>
+6. [Monorepo vs multirepo para 40 servicios y 10 equipos](casos-de-estudio/05-versionado-y-releases.md#6-monorepo-vs-multirepo-para-40-servicios-y-10-equipos) `[CASO]` — <sub>Repositorios / Tooling</sub>
+7. [La librería compartida infernal: `commons` usada por 30 servicios](casos-de-estudio/05-versionado-y-releases.md#7-la-librería-compartida-infernal-commons-usada-por-30-servicios) `[CASO]` — <sub>Librerías internas / Dependencias</sub>
+8. [Dos features de dos equipos deben salir juntas](casos-de-estudio/05-versionado-y-releases.md#8-dos-features-de-dos-equipos-deben-salir-juntas) `[CASO]` — <sub>Coordinación / Acoplamiento de release</sub>
+9. [Deprecar la v1 de una API pública con 200 integraciones activas](casos-de-estudio/05-versionado-y-releases.md#9-deprecar-la-v1-de-una-api-pública-con-200-integraciones-activas) `[CASO]` — <sub>API pública / Deprecation</sub>
+10. [Auditoría: "¿qué versión exacta de qué corría en producción el 3 de marzo?"](casos-de-estudio/05-versionado-y-releases.md#10-auditoría-qué-versión-exacta-de-qué-corría-en-producción-el-3-de-marzo) `[CASO]` — <sub>Trazabilidad / Compliance</sub>
 
 ---
 

@@ -15,15 +15,16 @@ Cada módulo está escrito para estudiarse en una sesión (60–120 min) y termi
 | # | Curso | Módulos | Prepara para |
 |:-:|---|:-:|---|
 | 00 | [Fundamentos de sistemas distribuidos](00-fundamentos-distribuidos/) | 6 | **Todo el banco.** Es el prerrequisito real de los demás |
-| 01 | [Java senior + Spring](01-java-senior/) | 5 | [`java-microservicios/`](../java-microservicios/) (46 preguntas) |
+| 01 | [Java senior + Spring](01-java-senior/) | 6 | [`java-microservicios/`](../java-microservicios/) (62 preguntas) |
 | 02 | [TypeScript / Node senior](02-typescript-node-senior/) | 4 | [`typescript-microservicios/`](../typescript-microservicios/) (48) |
 | 03 | [Go senior](03-go-senior/) | 4 | [`golang-microservicios/`](../golang-microservicios/) (55) |
 | 04 | [Cloud y Kubernetes (AWS · Azure · GCP)](04-cloud-y-kubernetes/) | 5 | [`cloud/`](../cloud/) (108) |
 | 05 | [Microfrontends](05-microfrontends/) | 4 | [`microfrontends/`](../microfrontends/) (30) |
 | 06 | [Seguridad aplicada](06-seguridad/) | 4 | [`seguridad-vulnerabilidades/`](../seguridad-vulnerabilidades/) (42) |
 | 07 | [Diseño y versionado de APIs](07-apis-y-versionado/) | 4 | [`versionamiento-apis/`](../versionamiento-apis/) (40) |
-| 08 | [System design y análisis de incidentes](08-system-design/) | 5 | [`casos-de-estudio/`](../casos-de-estudio/) (20) + todos los **[CASO]** |
+| 08 | [System design y análisis de incidentes](08-system-design/) | 5 | [`casos-de-estudio/`](../casos-de-estudio/) (50) + todos los **[CASO]** |
 | 09 | [Técnica de entrevista senior](09-tecnica-de-entrevista/) | 3 | La diferencia entre saberlo y que se note |
+| 10 | [Mensajería y streaming (Kafka · RabbitMQ)](10-mensajeria-y-streaming/) | 5 | [`mensajeria-eventos/`](../mensajeria-eventos/) (59) |
 
 **El curso 00 no es opcional.** El 70% de las preguntas de este repositorio —incluidas las de Java, Go o AWS— son en realidad preguntas de sistemas distribuidos disfrazadas de preguntas de tecnología. Si entiendes idempotencia, backpressure y fallos parciales, la mitad de las respuestas las deduces.
 
@@ -54,7 +55,7 @@ Cada módulo está escrito para estudiarse en una sesión (60–120 min) y termi
 | 3 | 07 APIs y versionado | Publicar v1 y v2 de una API sin romper clientes |
 | 4 | 04 Cloud + Kubernetes | Desplegar con health checks, HPA y límites bien puestos |
 | 5 | 06 Seguridad | Modelo de amenazas + arreglar 3 vulnerabilidades reales |
-| 6 | 05 Microfrontends *(si aplica al puesto)* | Shell + 2 remotes con deploy independiente |
+| 6 | 10 Mensajería y streaming (o 05 Microfrontends, según el puesto) | Laboratorio integrador de mensajería (o shell + 2 remotes) |
 | 7 | 08 System design | 5 diseños completos escritos y cronometrados |
 | 8 | 09 Entrevista + repaso | 3 simulacros con otra persona |
 
